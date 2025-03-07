@@ -143,13 +143,13 @@ const DermatologyNav = () => {
   return (
     <nav className="fixed top-16 text-xl w-full bg-white bg-opacity-25 z-50 flex items-center justify-between px-6 py-3 shadow-md">
       <div className="flex items-center gap-4 md:gap-14">
-        <Link to="/">
+        {/* <Link to="/">
           <img src={logoImg}
             height={"80px"} 
             width={"150px"} 
             className="w-32 md:w-72" 
           />
-        </Link>
+        </Link> */}
 
         <ul className="hidden text-2xl md:flex space-x-2">
           <li className="relative group text-xl">  
@@ -194,46 +194,12 @@ const DermatologyNav = () => {
                 <Link to="/bacteria" className="block  mt-2 transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Bacterial</Link>
                 <Link to="/viral" className="block  mt-2 hover:underline transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Viral</Link>
               </div>
-              <div>
-                <h3 className="text-gray-700 font-bold">HAIR</h3>
-                <hr className="my-2" />
-                <Link to="/hair/female" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Female Androgenetic Alopecia</Link>
-                <Link to="/hair/male" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Male Androgenetic Alopecia</Link>
-                <Link to="/hair/areata" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Alopecia Areata</Link>
-              </div>
-        
-            </div>
-          </li>
-
-          <li className="group relative">
-            <button className="px-4 text-2xl">Skin Care</button>
-            <div className="absolute left-0 hidden w-full md:w-[600px] bg-white text-black shadow-lg group-hover:flex flex-col md:flex-row p-6 space-x-0 md:space-x-8 z-10">
-              <div>
-                <h3 className="text-gray-700 font-bold">SKIN TREATMENTS & DISEASES</h3>
-                <hr className="my-2" />
-                <Link to="/skincare/skinnail" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Skin And Nail Diseases</Link>
-                <Link to="/skin/acne" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Acne/Pimples Treatment</Link>
-                <Link to="/skin/fungal-infection" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Ringworm/Fungal Infection</Link>
-                <Link to="/skin/psoriasis" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Psoriasis Treatments</Link>
-              
-              </div>
-              <div>
-                <h3 className="text-gray-700 font-bold">SKIN LIGHTENING</h3>
-                <hr className="my-2" />
-                <Link to="/lightening/peels" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Peels</Link>
-           
-                <Link to="/lightening/glutathione" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Glutathione</Link>
-                <Link to="/lightening/CavitationPeel" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Cavitation Peel</Link>
-              </div>
-            </div>
-          </li>
-
-          <li className="group relative">
-          <button  className="px-4 text-2xl">Other Conditions</button>
-          <div className="absolute   left-0 hidden flex-row w-full md:w-[600px] bg-transparent text-black shadow-lg group-hover:flex md:flex-row p-6 space-x-0 md:space-x-8 z-10">
-                <div>
-
              
+                <div>
+          <h3  className="text-gray-700 font-bold">Other Conditions</h3>
+          {/* <div className="absolute   left-0 hidden flex-row w-full md:w-[600px] bg-transparent text-black shadow-lg group-hover:flex md:flex-row p-6 space-x-0 md:space-x-8 z-10"> */}
+
+          <hr className="my-2" />
                 <Link to="/other" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Acne & Acne Scars</Link>
                 <Link to="/other/Rosacea" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Rosacea</Link>
                 <Link to="/other/psoriasis" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Psoriasis</Link>
@@ -241,8 +207,50 @@ const DermatologyNav = () => {
                 <Link to="/other/vitiligo" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Vitiligo</Link>
                 <Link to="/other/eczema" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Eczema</Link>
                 <Link to="/other/melasma" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Melasma</Link>
-                </div>
           </div>
+                </div>
+          
+              
+        
+            {/* </div> */}
+          </li>
+
+          <li className="group relative">
+            <button className="px-4  text-2xl">Leasers</button>
+            <div className="absolute left-0 justify-between  hidden w-full md:w-[600px] bg-white text-black shadow-lg group-hover:flex flex-col md:flex-row p-6 space-x-0 md:space-x-8 z-10">
+              <div>
+                {/* <h3 className="text-gray-700 font-bold">Aesthetic & Anti-Ageing</h3> */}
+                {/* <hr className="my-2" /> */}
+                <Link to="/leaser/hair-reduction" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Leaser for hair Reduction</Link>
+                <Link to="/leaser/pigmentation" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Leaser for Pigmentation(Q-Switch)</Link>
+                <Link to="/leaser/tatto-removel" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Leaser Tatto Removel</Link>
+                <Link to="/leaser/ance-scars" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Ance Scars</Link>
+                
+              </div>
+
+            </div>
+          </li>
+
+          <li className="group relative">
+            <button className="px-4  text-2xl">Hair</button>
+            <div className="absolute left-0 justify-between  hidden w-full md:w-[600px] bg-white text-black shadow-lg group-hover:flex flex-col md:flex-row p-6 space-x-0 md:space-x-8 z-10">
+              <div>
+                {/* <h3 className="text-gray-700 font-bold">Aesthetic & Anti-Ageing</h3> */}
+                {/* <hr className="my-2" /> */}
+                <Link to="/hair/hair-transplant" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Hair Transplant(FUE)</Link>
+                <Link to="/hair/plasma-therapy" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Platelet Rich Plasma Therapy (PRP)</Link>
+                <Link to="/hair/stem-cell-therapy" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Stem Cell Therapy</Link>
+                
+              </div>
+              <div>
+                <h3 className="text-gray-700 font-bold">HAIR</h3>
+                <hr className="my-2" />
+                <Link to="/hair/female" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Female Androgenetic Alopecia</Link>
+                <Link to="/hair/male" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Male Androgenetic Alopecia</Link>
+                <Link to="/hair/areata" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Alopecia Areata</Link>
+              </div>
+
+            </div>
           </li>
 
           <li className="group relative">
@@ -269,37 +277,37 @@ const DermatologyNav = () => {
 
             </div>
           </li>
+
+          <li className="group relative">
+            <button className="px-4 text-2xl">Advance Skin Care</button>
+            <div className="absolute left-0 hidden w-full md:w-[600px] bg-white text-black shadow-lg group-hover:flex flex-col md:flex-row p-6 space-x-0 md:space-x-8 z-10">
+              <div>
+                <h3 className="text-gray-700 font-bold">SKIN TREATMENTS & DISEASES</h3>
+                <hr className="my-2" />
+                <Link to="/skincare/skinnail" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Skin And Nail Diseases</Link>
+                <Link to="/skin/acne" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Acne/Pimples Treatment</Link>
+                <Link to="/skin/fungal-infection" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Ringworm/Fungal Infection</Link>
+                <Link to="/skin/psoriasis" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Psoriasis Treatments</Link>
+              
+              </div>
+              <div>
+                <h3 className="text-gray-700 font-bold">SKIN LIGHTENING</h3>
+                <hr className="my-2" />
+                <Link to="/lightening/peels" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Peels</Link>
+           
+                <Link to="/lightening/glutathione" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Glutathione</Link>
+                <Link to="/lightening/CavitationPeel" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Cavitation Peel</Link>
+              </div>
+            </div>
+          </li>
+
+         
+
+         
+       
  
-          <li className="group relative">
-            <button className="px-4  text-2xl">Hair</button>
-            <div className="absolute left-0 justify-between  hidden w-full md:w-[600px] bg-white text-black shadow-lg group-hover:flex flex-col md:flex-row p-6 space-x-0 md:space-x-8 z-10">
-              <div>
-                {/* <h3 className="text-gray-700 font-bold">Aesthetic & Anti-Ageing</h3> */}
-                {/* <hr className="my-2" /> */}
-                <Link to="/hair/hair-transplant" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Hair Transplant(FUE)</Link>
-                <Link to="/hair/plasma-therapy" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Platelet Rich Plasma Therapy (PRP)</Link>
-                <Link to="/hair/stem-cell-therapy" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Stem Cell Therapy</Link>
-                
-              </div>
 
-            </div>
-          </li>
-
-          <li className="group relative">
-            <button className="px-4  text-2xl">Leasers</button>
-            <div className="absolute left-0 justify-between  hidden w-full md:w-[600px] bg-white text-black shadow-lg group-hover:flex flex-col md:flex-row p-6 space-x-0 md:space-x-8 z-10">
-              <div>
-                {/* <h3 className="text-gray-700 font-bold">Aesthetic & Anti-Ageing</h3> */}
-                {/* <hr className="my-2" /> */}
-                <Link to="/leaser/hair-reduction" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Leaser for hair Reduction</Link>
-                <Link to="/leaser/pigmentation" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Leaser for Pigmentation(Q-Switch)</Link>
-                <Link to="/leaser/tatto-removel" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Leaser Tatto Removel</Link>
-                <Link to="/leaser/ance-scars" className="block mt-2  transform transition duration-500 ease-in-out hover:scale-105 hover:translate-x-9">Ance Scars</Link>
-                
-              </div>
-
-            </div>
-          </li>
+       
 
 
 
