@@ -1,0 +1,92 @@
+$(document).ready(function () {
+    let appointmentModal = $('#makeAppointment');
+    let yesterday = new Date((new Date()).valueOf() - 1000 * 60 * 60 * 24);
+    $('.pickadate').pickadate({
+        disable: [
+            {from: [0, 0, 0], to: yesterday}
+        ]
+    });
+    let $form = $('#book-appointment-form');
+    let notice = null;
+    $form.attr('novalidate', 'novalidate').ajaxForm({
+        dataType: 'json',
+        beforeSubmit: function () {
+            let inputs = $form.find("[data-constraints]");
+            if (isValidated(inputs)) {
+                $form.addClass('form-in-process');
+                notice = new PNotify({
+                    type: 'info',
+                    title: 'Please wait',
+                    text: 'Sending appointment request...',
+                    icon: 'icon icon-xxs fa-spinner fa-pulse text-white',
+                    hide: false,
+                    addclass: 'alert-warning text-white'
+                });
+                appointmentModal.modal('hide');
+            } else {
+                return false;
+            }
+        },
+        error: function (error) {
+            let err = (($(error.responseText).text()).substring((($(error.responseText).text()).lastIndexOf('}')) + 1)).trim();
+            $form.removeClass('form-in-process');
+            if (notice) {
+                showError('Something went wrong!', err);
+            }
+        },
+        success: function (result) {
+            console.log(result);
+            $form.addClass('success').removeClass('form-in-process');
+            if (parseInt(result.code) === 1) {
+                if (notice) {
+                    let options = {
+                        text: result.message
+                    };
+                    options.title = 'Success!';
+                    options.type = 'success';
+                    options.icon = 'icon icon-xxs fa-check text-white';
+                    options.addclass = 'alert-success text-white';
+                    options.hide = true;
+                    notice.update(options);
+                }
+                $form[0].reset();
+            } else {
+                if (notice) {
+                    showError('Something went wrong!', result.message);
+                }
+            }
+            $form.removeClass('success');
+        }
+    });
+    function showError(title, message) {
+        if(notice) {
+            let options = {
+                text: message
+            };
+            options.title = title;
+            options.type = 'error';
+            options.hide = true;
+            options.icon = 'icon icon-xxs fa-stop text-white';
+            options.addclass = 'alert-danger text-white custom-alert';
+            notice.update(options);
+        }
+    }
+    function isValidated(elements) {
+        let results, errors = 0;
+        if (elements.length) {
+            for (j = 0; j < elements.length; j++) {
+                let $input = $(elements[j]);
+                if ((results = $input.regula('validate')).length) {
+                    for (let k = 0; k < results.length; k++) {
+                        errors++;
+                        $input.siblings(".form-validation").text(results[k].message).parent().addClass("has-error");
+                    }
+                } else {
+                    $input.siblings(".form-validation").text("").parent().removeClass("has-error")
+                }
+            }
+            return errors === 0;
+        }
+        return true;
+    }
+});
