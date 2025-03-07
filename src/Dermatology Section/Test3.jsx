@@ -88,9 +88,9 @@ const Test3 = ({ title, description,  image, infections=[],faqs=[],sections=[] }
           className="md:w-1/2 text-left"
         >
           <h2 className="text-3xl md:text-2xl font-semibold text-gray-800 mb-6">{faqs}</h2>
-          <div className="max-w-2xl text-2xl w-full">
+          <div className="max-w-2xl bg-[#727D73] gap-2 rounded-lg text-2xl w-full">
             {infections.map((infection, index) => (
-              <Accordion key={index} title={infection.title} content={infection.content} />
+              <Accordion key={index} title={infection.title} content={infection.content}  />
             ))}
           </div>
      

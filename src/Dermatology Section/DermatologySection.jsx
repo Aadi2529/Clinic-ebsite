@@ -10,6 +10,7 @@ import BlogSection from './BlogSection'
 import DermatologyFooter from './DermatologyFooter'
 import TopSection from '../Home Page/TopSection'
 import ServicesSection from './ServiceSection'
+import AdvanceDermatology from './AdvanceDermatology'
 
 const DermatologySection = () => {
   return (
@@ -18,7 +19,7 @@ const DermatologySection = () => {
       <DermatologyHero />
       <ServicesSection />
       <ApproachSection />
-      
+      <AdvanceDermatology />
       <AnimatedSection />
       {/* <AboutSection /> */}
       <Feacturs />

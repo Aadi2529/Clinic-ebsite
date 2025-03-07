@@ -14,6 +14,8 @@ import Dental_Hero from './Dental_Hero'
 import BehaveSection from './BehaveSection'
 import DoctorSection from './DoctorSection'
 import CardsSection from './CardsSection'
+import AnimatedSection from '../Dermatology Section/AnimatedSection'
+import Dental_AnimatedSection from './Dental_AnimatedSection'
 
 
 const Dentis = () => {
@@ -26,6 +28,7 @@ const Dentis = () => {
       {/* <Hero /> */}
       <Dental_Section />
       <BehaveSection />
+      <Dental_AnimatedSection />
       <DoctorSection />
       <CardsSection />
       <Dental_Service />
